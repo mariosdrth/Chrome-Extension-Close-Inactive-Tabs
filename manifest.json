@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Close all tabs in window except for current one",
   "manifest_version": 2,
-  "permissions": ["tabs"],
   "web_accessible_resources": ["style.css", "img/*"],
 
   "background": {
