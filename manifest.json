@@ -1,10 +1,8 @@
 {
   "name": "Close All Inactive Tabs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Close all tabs in window except for current one",
   "manifest_version": 2,
-  "web_accessible_resources": ["style.css", "img/*"],
-
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -15,6 +13,16 @@
       "32": "icon32.png",
       "48": "icon48.png",
       "128": "icon128.png"
+    }
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "windows": "Shift+Alt+C",
+        "mac": "Command+Shift+C",
+        "chromeos": "Shift+Alt+C",
+        "linux": "Shift+Alt+C"
+      }
     }
   },
   "icons": {
