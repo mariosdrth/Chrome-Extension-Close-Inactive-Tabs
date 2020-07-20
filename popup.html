@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1 class="header">Close Tabs Extension</h1>
+    <hr id="header-seperator" />
+    <div class="content">
+      <a class="close-tabs" id="close-tabs-all">Close All Tabs <span class="expl">(except current one)</span></a>
+      <a class="close-tabs" id="close-tabs-left">Close Tabs Left <span class="expl">(of current one)</span></a>
+      <a class="close-tabs" id="close-tabs-right">Close Tabs Right <span class="expl">(of current one)</span></a>
+      <div id="tabs-to-choose">
+        <a class="close-tabs" id="show-tabs">Show Open Tabs <span class="expl">(in window)</span></a>
+        <ul id="tabs-list"></ul>
+        <button class="remove-element open-tabs-btn" id="btn-open-tabs-select-all">Select All</button>
+        <button class="remove-element open-tabs-btn" id="btn-open-tabs">Close Selected</button>
+      </div>
+      <div class="theme-cont">
+        <label for="theme">Dark Theme</label>
+        <input type="checkbox" name="theme" id="theme" checked />
+      </div>
+    </div>
+    <script src="content.js"></script>
+  </body>
+</html>

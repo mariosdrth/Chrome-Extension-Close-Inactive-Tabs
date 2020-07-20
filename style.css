@@ -1,0 +1,126 @@
+:root {
+  --main-back-color: #313131;
+  --main-color: #fcfcfc;
+}
+
+body {
+  background-color: var(--main-back-color);
+  min-height: 14rem;
+  min-width: 14rem;
+  color: var(--main-color);
+  display: flex;
+  flex-flow: column;
+  width: max-content;
+}
+
+#header-seperator {
+  width: 100%;
+}
+
+.header {
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.content {
+  padding: 0.6rem;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+}
+
+.content > *:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+
+.close-tabs {
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-block;
+  padding: 0.2rem;
+  border: 1px solid transparent;
+}
+
+.close-tabs:hover {
+  background-color: rgba(15, 72, 80, 0.8);
+  border: 1px solid #0a3238;
+  color: #fcfcfc;
+}
+
+.theme-cont {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  align-self: flex-end;
+}
+
+#theme {
+  margin-left: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.expl {
+  font-size: 0.6rem;
+}
+
+#show-tabs {
+  width: 100%;
+}
+
+#tabs-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-open-tabs {
+  margin-right: 0.2rem;
+}
+
+.remove-element {
+  display: none;
+}
+
+.add-element {
+  display: inline-block;
+}
+
+.open-tabs-btn,
+.open-tabs-btn:focus {
+  background-color: #3498db;
+  outline: none;
+  color: #fcfcfc;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.open-tabs-btn:hover {
+  background-color: rgba(51, 152, 219, 0.8);
+  transform: translateY(-0.1rem);
+}
+
+.open-tabs-btn:active {
+  background-color: rgba(51, 152, 219, 0.4);
+  transform: translateY(0);
+}
+
+#btn-open-tabs-select-all {
+  margin-left: 1.2rem;
+}
+
+#btn-open-tabs {
+  margin-left: 0.6rem;
+}
+
+.ul-open-tabs {
+  cursor: pointer;
+}
+
+::selection {
+  background-color: #1778b9;
+  color: #fcfcfc;
+}
