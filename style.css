@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-flow: column;
   flex-grow: 1;
+  user-select: none;
 }
 
 .content > *:not(:last-child) {
@@ -54,6 +55,10 @@ body {
   align-items: flex-end;
   flex-grow: 1;
   align-self: flex-end;
+}
+
+.theme-cont > * {
+  cursor: pointer;
 }
 
 #theme {
@@ -116,11 +121,26 @@ body {
   margin-left: 0.6rem;
 }
 
-.ul-open-tabs {
-  cursor: pointer;
-}
-
 ::selection {
   background-color: #1778b9;
   color: #fcfcfc;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin: 0.25rem 0;
+}
+
+.list-item-img {
+  width: 16px;
+  margin: 0 0.2rem 0 0.4rem;
+}
+
+.list-item > * {
+  cursor: pointer;
+}
+
+.list-item:last-child {
+  margin-bottom: 1rem;
 }

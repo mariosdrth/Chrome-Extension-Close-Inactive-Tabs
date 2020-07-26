@@ -32,27 +32,17 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 });
 
 const closeAllTabs = () => {
-  chrome.tabs.query({ windowId: chrome.windows.WINDOW_ID_CURRENT }, (tabs) =>
-    chrome.tabs.remove(tabs.filter((tab) => !tab.active).map((tab) => tab.id))
-  );
+  chrome.tabs.query({ windowId: chrome.windows.WINDOW_ID_CURRENT }, (tabs) => chrome.tabs.remove(tabs.filter((tab) => !tab.active).map((tab) => tab.id)));
 };
 
 const closeTabsLeft = () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabsForCurrent) => {
-    chrome.tabs.query({ windowId: chrome.windows.WINDOW_ID_CURRENT }, (tabs) =>
-      chrome.tabs.remove(
-        tabs.filter((tabToFilter) => tabToFilter.index < tabsForCurrent[0].index).map((tabToMap) => tabToMap.id)
-      )
-    );
+    chrome.tabs.query({ windowId: chrome.windows.WINDOW_ID_CURRENT }, (tabs) => chrome.tabs.remove(tabs.filter((tabToFilter) => tabToFilter.index < tabsForCurrent[0].index).map((tabToMap) => tabToMap.id)));
   });
 };
 
 const closeTabsRight = () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabsForCurrent) => {
-    chrome.tabs.query({ windowId: chrome.windows.WINDOW_ID_CURRENT }, (tabs) =>
-      chrome.tabs.remove(
-        tabs.filter((tabToFilter) => tabToFilter.index > tabsForCurrent[0].index).map((tabToMap) => tabToMap.id)
-      )
-    );
+    chrome.tabs.query({ windowId: chrome.windows.WINDOW_ID_CURRENT }, (tabs) => chrome.tabs.remove(tabs.filter((tabToFilter) => tabToFilter.index > tabsForCurrent[0].index).map((tabToMap) => tabToMap.id)));
   });
 };

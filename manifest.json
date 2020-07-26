@@ -1,6 +1,6 @@
 {
   "name": "Close All Inactive Tabs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Close all tabs in window except for current one",
   "manifest_version": 2,
   "web_accessible_resources": ["style.css"],
